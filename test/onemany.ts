@@ -1,5 +1,4 @@
-import {OneMany, One, Many} from "../src/onemany";
-import {Err, Ok, Result} from "../lib";
+import {OneMany, One, Many} from "../src";
 
 describe('onemany', () => {
     describe('Type checking', () => {
