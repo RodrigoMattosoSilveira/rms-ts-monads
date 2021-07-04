@@ -1,0 +1,68 @@
+{
+  "name": "space-monad",
+  "version": "1.0.0",
+  "description": "Option and Result ~Monad for typescript, focus is on simplicity and typesafety",
+  "main": "lib/index",
+  "typings": "lib/index.d.ts",
+
+  "scripts": {
+    "build": "tsc src/index.ts --lib 'es5,es2015.core' --outDir ./lib --declaration --strict",
+    "pretest": "npm run build",
+    "test": "jest",
+    "prepublish": "npm run build"
+  },
+
+  "files": [
+    "lib"
+  ],
+
+  "devDependencies": {
+    "typescript": "4.1.2",
+    "jest": "26.6.1",
+    "ts-jest": "26.4.2",
+    "@types/jest": "26.0.15",
+    "@types/node": "14.14.2"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AlexGalays/space-monad.git"
+  },
+  "keywords": [
+    "option",
+    "result",
+    "monad",
+    "maybe",
+    "typescript"
+  ],
+  "author": "AlexGalays",
+  "homepage": "https://github.com/AlexGalays/space-monad",
+  "license": "MIT",
+
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "moduleFileExtensions": ["js", "ts"],
+    "testMatch": [
+      "<rootDir>/test/*.ts"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/test/shouldNotCompile.ts"
+    ],
+    "globals": {
+      "ts-jest": {
+        "babelConfig": false
+      }
+    }
+  },
+
+  "prettier": {
+    "tabWidth": 2,
+    "printWidth": 110,
+    "semi": false,
+    "singleQuote": true,
+    "arrowParens": "avoid",
+    "trailingComma": "none"
+  }
+}
