@@ -85,7 +85,7 @@ _One.prototype = {
         return this
     },
 
-    fold(ifMany: any, ifOne: any) {
+    fold(ifOne: any, ifMany: any) {
         return ifOne(this._value)
     },
 
@@ -125,8 +125,8 @@ _Many.prototype = {
         return fn(this._value)
     },
 
-    fold(ifMany: any, ifOne: any) {
-        return ifMany(this._value);
+    fold(ifOne: any, ifMany: any) {
+        return ifMany(this._value)
     },
 
     toString() {
