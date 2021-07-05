@@ -28,10 +28,10 @@ export interface OneManyOps<E, A> { // E is One, A is Many
     flatMapMany<E2, B>(fn: (e: E) => OneMany<E2, B>): OneMany<E | E2, B>
 
     /**
-     * Applies the first function if this is an Many, else applies the second function.
+     * Applies the first function if this is a One, else applies the second function.
      * Note: Don't use in tight loops; use isOne() instead.
      */
-    fold<B, C>(ifMany: (err: E) => B, ifOne: (value: A) => C): B | C
+    fold<B, C>(ifOne: (one: E) => B, ifMany: (many: A) => C): B | C
 }
 
 export interface OneManyObject {
