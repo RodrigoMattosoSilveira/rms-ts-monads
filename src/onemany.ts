@@ -42,13 +42,12 @@ export interface OneManyObject {
 }
 
 export interface One<E, T> extends OneManyOps<E, T> {
-    type: 'many'
-    get: () => T
-}
-
-export interface Many<E, T> extends OneManyOps<E, T> {
     type: 'one'
     get: () => E
+}
+export interface Many<E, T> extends OneManyOps<E, T> {
+    type: 'many'
+    get: () => T
 }
 
 export type OneMany<E, T> = One<E, T> | Many<E, T>
